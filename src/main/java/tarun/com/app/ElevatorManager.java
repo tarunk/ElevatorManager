@@ -17,7 +17,7 @@ public class ElevatorManager {
 		System.out.println(" ");
 		for (int i = 0; i < 2; ++i) {
 			String pathDistance = elevator[i].executeCommand(level, cmds);
-			System.out.printf("%-64s", pathDistance);;
+			System.out.printf("%-64s", pathDistance);
 			if (i == 0) {
 				System.out.print("| ");
 			}
@@ -28,7 +28,7 @@ public class ElevatorManager {
 		for (int i = 0; i < 128; ++i) {
 			System.out.print("_");
 		}
-		System.out.println("");
+		System.out.println(" ");
 		System.out.printf("%-64s", "Mode A");
 		System.out.print("| ");
 		System.out.printf("%-64s\n", "Mode B");
@@ -41,10 +41,10 @@ public class ElevatorManager {
 	public static void main(String[] args) {
 		if (args.length < 1) {
 			System.out.println("specify command file name");
-			return;
+			//return;
 		}
-		//CommandReader cr = new CommandReader("cmd.txt");
-		CommandReader cr = new CommandReader(args[0]);
+		CommandReader cr = new CommandReader("cmd.txt");
+		//CommandReader cr = new CommandReader(args[0]);
 		cr.readCommand();
 		ArrayList<Integer> pos = cr.getPositionList();
 		
